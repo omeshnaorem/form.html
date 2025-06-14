@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 40;
+        background-color: solid white;
+      }
+      form {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        background: white;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      h2 {
+        text-align: center;
+
+        transform-style: preserve-3d;
+
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin: 12px 0 6px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      textarea {
+        height: 100px;
+        resize: vertical;
+      }
+      input[type="submit"]:hover,
+      button:hover {
+        background-color: #190be0a2;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="@" method="post">
+      <i class="fa-brands fa-facebook"></i>
+      <h2 style="color: blue">REGISTER</h2>
+      <label for="Full Name"> Full Name:</label>
+      <input
+        type="text"
+        id="fullname"
+        placeholder="Please enter your full name"
+        required
+      />
+      <label for="email">Email:</label>
+      <input type="text" id="email" placeholder="example@gmail.com" required />
+
+      <label for="password">Password:</label>
+      <input type="text" id="password" required />
+      <label for="age">Age:</label>
+      <input type="number" id="number" min="18" max="60" required />
+      <label for="gender">Gender:</label>
+      <select name="gender" id="gender" required>
+        <option value="" disabled selected>Select your gender</option>
+        <option value="feamle">Female</option>
+        <option value="male">Male</option>
+        <option value="others">Others...</option>
+      </select>
+      <label for="bio">Short Bio:</label>
+      <textarea
+        name="bio"
+        id="bio"
+        placeholder="tell us about youself!
+      "
+      ></textarea>
+
+      <button type="submit" required>Register</button>
+    </form>
+  </body>
+</html>
